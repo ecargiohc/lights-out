@@ -82,7 +82,7 @@ class Board extends Component {
 
     // TODO
     return(
-      <table>
+      <table className="Board">
         <tbody>
           <tr>
             <Cell isLit={true} />
