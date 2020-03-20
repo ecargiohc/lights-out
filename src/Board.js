@@ -50,7 +50,7 @@ class Board extends Component {
     // TODO: create array-of-arrays of true/false values
     for (let y=0; y<this.props.nrows; y++) {
       let row = [];
-      for (x=0; x<this.props.ncols; x++) {
+      for (let x=0; x<this.props.ncols; x++) {
         row.push(Math.random() < this.props.chanceLightStartsOn);
       }
       board.push(row);
@@ -73,7 +73,6 @@ class Board extends Component {
         board[y][x] = !board[y][x];
       }
     }
-
     // TODO: flip this cell and the cells around it
 
     // win when every cell is turned off
@@ -86,23 +85,22 @@ class Board extends Component {
   /** Render game board or winning message. */
 
   render() {
-
     // if the game is won, just show a winning msg & render nothing else
-
     // TODO
-
     // make table board
-
     // TODO
+    let tblBoard = [];
+    for (let y=0; y<this.props.nrows; y++) {
+      let row = [];
+      for (let x=0; x<this.props.ncols; x++) {
+        row.push(<Cell isLit={this.state.board[y][x]} />)
+      }
+      tblBoard.push(<tr>{row}</tr>);
+    }
+
     return(
       <table className="Board">
-        <tbody>
-          <tr>
-            <Cell isLit={true} />
-            <Cell isLit={false} />
-            <Cell isLit={true} />
-          </tr>
-        </tbody>
+        <tbody>{tblBoard}</tbody>
       </table>
     )
   }
