@@ -74,12 +74,15 @@ class Board extends Component {
         board[y][x] = !board[y][x];
       }
     }
+    // flip initial cell
+    flipCell(y, x);
+
     // TODO: flip this cell and the cells around it
 
     // win when every cell is turned off
     // TODO: determine is the game has been won
-
-    // this.setState({board, hasWon});
+    let hasWon = false; 
+    this.setState({board, hasWon: hasWon});
   }
 
 
