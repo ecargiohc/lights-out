@@ -23,4 +23,8 @@
 
   .flux {
     font-family: neon;
+    color: #FB4262;
+    font-size: 9vw;
+    line-height: 9vw;
+    text-shadow: 0 0 3vw #F40A35;
   }
