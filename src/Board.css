@@ -28,3 +28,13 @@
     line-height: 9vw;
     text-shadow: 0 0 3vw #2356ff;
   }
+
+  .neon {
+    animation: neon 1s ease infinite;
+    -moz-animation: neon 1s ease infinite;
+    -webkit-animation: neon 1s ease infinite;
+  }
+  
+  @keyframes neon-orange {
+    
+  }
